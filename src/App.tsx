@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Gamepad2, Menu, Play, Sparkles, X, Zap } from 'lucide-react'
 const games=[
- {id:'skyline',name:'SKYLINE RUSH',type:'RACING / ACTION',copy:'The city is your playground. The skyline is your finish line.',cover:'/covers/skyline-racer.svg',number:'01'},
+ {id:'skyline',name:'SKYLINE RUSH',type:'RACING / ACTION',copy:'The city is your playground. The skyline is your finish line.',cover:'https://assets.production.jabali.ai/7bca3d20-0e88-4cb5-a08e-6deaa838aff1/bd4d697c-7174-461b-951e-a0fbb4d7593f',number:'01'},
  {id:'serpent',name:'NEON SERPENT',type:'ARCADE / SURVIVAL',copy:'Enter the arena. Outgrow the chaos. Become the legend.',cover:'/covers/neon-serpent.svg',number:'02'},
- {id:'laststand',name:'LAST STAND',type:'ACTION / SURVIVAL',copy:'When the world falls apart, every second becomes a choice.',cover:'/covers/last-stand.svg',number:'03'},
+ {id:'laststand',name:'LAST STAND',type:'ACTION / SURVIVAL',copy:'When the world falls apart, every second becomes a choice.',cover:'https://img.goodfon.com/wallpaper/nbig/3/be/samurai-dojo-samurai-gory-nebo-kamni-derevo-ptitsy.webp',number:'03'},
  {id:'arcane',name:'ARCANE BLOCKS',type:'PUZZLE / STRATEGY',copy:'A sharper mind is your greatest weapon.',cover:'/covers/arcane-blocks.svg',number:'04'}
 ]
 function App(){
