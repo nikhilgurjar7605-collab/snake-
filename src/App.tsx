@@ -1,5 +1,5 @@
 import { useEffect, useState, type CSSProperties, type MouseEvent } from 'react'
-import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Gamepad2, Menu, Play, Sparkles, X, Zap, Flame, Trophy, Globe2 } from 'lucide-react'
+import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Gamepad2, Menu, Play, Sparkles, X, Zap, Flame, Trophy, Globe2 } from 'lucide-react'\nimport ArcadeGames from './ArcadeGames'
 
 const games = [
   { id: 'skyline', name: 'SKYLINE RUSH', type: 'RACING / ACTION', copy: 'The city is your playground. The skyline is your finish line.', cover: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=90', number: '01', tag: 'ADRENALINE' },
@@ -59,7 +59,7 @@ function App() {
     <div className="scroll-progress" />
     <header className={scrolled ? 'landing-header is-scrolled' : 'landing-header'}>
       <a className="landing-brand" href="#top" onClick={e => { e.preventDefault(); scrollTo('top') }}><span className="brand-symbol"><Gamepad2 size={21} /></span><span>PIXORA<span className="brand-period">.</span><small>PLAY BEYOND</small></span></a>
-      <nav className={menu ? 'landing-nav show' : 'landing-nav'}><a className="nav-active" href="#games" onClick={e => { e.preventDefault(); scrollTo('games') }}>Discover</a><a href="#moments" onClick={e => { e.preventDefault(); scrollTo('moments') }}>Experiences</a><a href="#about" onClick={e => { e.preventDefault(); scrollTo('about') }}>About</a></nav>
+      <nav className={menu ? 'landing-nav show' : 'landing-nav'}><a className="nav-active" href="#games" onClick={e => { e.preventDefault(); scrollTo('games') }}>Discover</a><a href="#play-now" onClick={e => { e.preventDefault(); scrollTo('play-now') }}>Play now</a><a href="#moments" onClick={e => { e.preventDefault(); scrollTo('moments') }}>Experiences</a><a href="#about" onClick={e => { e.preventDefault(); scrollTo('about') }}>About</a></nav>
       <div className="header-actions"><button className="header-login" onClick={() => scrollTo('games')}>EXPLORE ARCADE <ArrowRight size={13} /></button><button className="menu-toggle" onClick={() => setMenu(!menu)} aria-label="Toggle menu">{menu ? <X /> : <Menu />}</button></div>
     </header>
 
@@ -82,7 +82,7 @@ function App() {
       <div className="section-footnote"><span>MORE WORLDS ARE IN DEVELOPMENT</span><span>BUILT FOR THE LOVE OF PLAY <i>✳</i></span></div>
     </section>
 
-    <section className="experience-section" id="moments">
+    <ArcadeGames />\n\n    <section className="experience-section" id="moments">
       <div className="experience-head" data-reveal><span className="section-eyebrow">02 / BEYOND THE SCREEN</span><h2>THERE'S ALWAYS<br /><em>ANOTHER WORLD.</em></h2><p>Don't just browse games. Step into an atmosphere built to pull you in.</p></div>
       <div className="experience-stage" onMouseMove={movePointer}>
         <div className="experience-image" style={{ backgroundImage: 'url(' + moments[moment].image + ')' }} />
