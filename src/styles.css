@@ -200,3 +200,75 @@
 .subpage-store{animation:subpage-enter .45s ease both}
 @keyframes subpage-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* PIXORA glassmorphism visual system */
+.pixora-shell{
+ background:
+  radial-gradient(ellipse at 16% 18%,rgba(119,52,139,.22),transparent 34%),
+  radial-gradient(ellipse at 78% 12%,rgba(41,91,153,.18),transparent 32%),
+  radial-gradient(ellipse at 82% 84%,rgba(177,42,72,.15),transparent 34%),
+  linear-gradient(135deg,#080910 0%,#10101c 48%,#090a12 100%);
+}
+.pixora-shell:before,.pixora-shell:after{opacity:.3;filter:blur(90px)}
+.left-rail,.right-rail{
+ background:linear-gradient(150deg,rgba(24,25,39,.68),rgba(10,11,19,.76));
+ backdrop-filter:blur(28px) saturate(145%);
+ -webkit-backdrop-filter:blur(28px) saturate(145%);
+ border-color:rgba(255,255,255,.11);
+}
+.left-rail{box-shadow:12px 0 45px rgba(0,0,0,.16)}
+.right-rail{box-shadow:-12px 0 45px rgba(0,0,0,.16)}
+.store-topbar{
+ background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));
+ backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+ border-color:rgba(255,255,255,.1)
+}
+.top-search,.top-tools>button,.rail-user,.rail-link,.lower-panel,.store-card,
+.friends-empty,.activity-empty,.right-promo,.empty-library{
+ background:linear-gradient(145deg,rgba(255,255,255,.095),rgba(255,255,255,.025));
+ border:1px solid rgba(255,255,255,.12);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 12px 28px rgba(0,0,0,.13);
+ backdrop-filter:blur(20px) saturate(130%);
+ -webkit-backdrop-filter:blur(20px) saturate(130%);
+}
+.rail-link.active{
+ background:linear-gradient(110deg,rgba(224,67,96,.24),rgba(112,62,139,.13));
+ border-color:rgba(255,119,145,.32);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 0 22px rgba(215,55,91,.09)
+}
+.store-hero{
+ border:1px solid rgba(255,255,255,.22);
+ box-shadow:0 24px 65px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.16);
+}
+.hero-vignette{
+ background:
+  linear-gradient(90deg,rgba(7,8,15,.94) 0%,rgba(7,8,15,.76) 35%,rgba(7,8,15,.2) 78%,rgba(7,8,15,.1)),
+  linear-gradient(0deg,rgba(7,8,15,.48),transparent 54%);
+}
+.store-card{
+ background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.035));
+ border-color:rgba(255,255,255,.14);
+}
+.store-card:hover{
+ border-color:rgba(255,126,157,.52);
+ box-shadow:0 18px 40px rgba(0,0,0,.34),0 0 26px rgba(229,75,112,.12),inset 0 1px 0 rgba(255,255,255,.14)
+}
+.store-card-info{background:linear-gradient(180deg,rgba(15,15,25,.14),rgba(12,13,22,.52))}
+.wish-btn,.cover-status,.hero-arrows button,.hero-pagination button{
+ backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)
+}
+.wish-btn{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15)}
+.lower-panel{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025))}
+.empty-library{background:rgba(255,255,255,.045)}
+.friends-empty,.activity-empty{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025))}
+.right-promo{background:linear-gradient(145deg,rgba(135,48,86,.24),rgba(50,42,88,.16));border-color:rgba(255,117,147,.26)}
+.top-profile span,.avatar{box-shadow:0 0 0 2px rgba(255,255,255,.16),0 0 22px rgba(223,69,119,.2)}
+.store-primary{box-shadow:0 8px 26px rgba(217,43,73,.27),inset 0 1px 0 rgba(255,255,255,.28)}
+.subpage-heading,.empty-large{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.subpage-game-grid .store-card{background:rgba(255,255,255,.055)}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
+ .left-rail,.right-rail,.top-search,.store-card,.lower-panel,.friends-empty,.activity-empty{background:rgba(20,20,31,.96)}
+}
+@media(prefers-reduced-transparency:reduce){
+ .left-rail,.right-rail,.store-topbar,.top-search,.top-tools>button,.store-card,.lower-panel,.friends-empty,.activity-empty,.right-promo{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(17,18,28,.96)}
+}
