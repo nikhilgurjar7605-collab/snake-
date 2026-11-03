@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type CSSProperties, type MouseEvent } from 'react'
 import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Gamepad2, Menu, Play, Sparkles, X, Zap, Flame, Trophy, Globe2 } from 'lucide-react'
 
 const games = [
@@ -50,12 +50,12 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setMenu(false)
   }
-  const movePointer = (event: React.MouseEvent<HTMLElement>) => {
+  const movePointer = (event: MouseEvent<HTMLElement>) => {
     const rect = event.currentTarget.getBoundingClientRect()
     setPointer({ x: ((event.clientX - rect.left) / rect.width) * 100, y: ((event.clientY - rect.top) / rect.height) * 100 })
   }
 
-  return <main className="pixora-landing" onMouseMove={movePointer} style={{ '--pointer-x': pointer.x + '%', '--pointer-y': pointer.y + '%' } as React.CSSProperties}>
+  return <main className="pixora-landing" onMouseMove={movePointer} style={{ '--pointer-x': pointer.x + '%', '--pointer-y': pointer.y + '%' } as CSSProperties}>
     <div className="ambient ambient-one" /><div className="ambient ambient-two" /><div className="grain" />
     <div className="scroll-progress" />
     <header className={scrolled ? 'landing-header is-scrolled' : 'landing-header'}>
