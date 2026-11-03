@@ -20,7 +20,6 @@ function App() {
   const [scrolled, setScrolled] = useState(false)
   const [moment, setMoment] = useState(0)
   const [pointer, setPointer] = useState({ x: 50, y: 40 })
-  const [sound, setSound] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
@@ -69,7 +68,7 @@ function App() {
       <div className="hero-copy"><div className="eyebrow"><span className="eyebrow-line" /><Sparkles size={13} /> THE NEXT LEVEL OF PLAY</div><p className="hero-index">PIXORA ORIGINALS <span>— {current.number} / 04</span></p>
         <h1>PLAY<br /><em>BEYOND</em><span className="hero-dot">.</span></h1><p className="hero-description">A universe of games. A world of competition.<br />Your next obsession starts here.</p>
         <div className="hero-feature"><span className="feature-rule" /><div><b>{current.name}</b><small>{current.type}</small></div><span className="feature-copy">{current.copy}</span></div>
-        <div className="hero-buttons"><button className="btn-primary" onClick={() => scrollTo('games')}>ENTER THE ARCADE <ArrowRight size={16} /></button><button className="btn-play" onClick={() => setSound(v => !v)}><span><Play size={13} fill="currentColor" /></span>{sound ? 'SOUND EXPERIENCE ON' : 'ACTIVATE EXPERIENCE'}</button></div>
+        <div className="hero-buttons"><button className="btn-primary" onClick={() => scrollTo('games')}>ENTER THE ARCADE <ArrowRight size={16} /></button><button className="btn-play" onClick={() => setMoment(v => (v + 1) % moments.length)}><span><Play size={13} fill="currentColor" /></span>SHIFT THE SCENE</button></div>
       </div>
       <div className="hero-side-note"><span>INDEPENDENT PLAY. INFINITE POSSIBILITIES.</span><i /></div><div className="hero-vertical">P X / 0 1 — 2 0 2 6</div>
       <div className="hero-bottom"><div className="hero-pager">{games.map((g, i) => <button key={g.id} className={i === active ? 'on' : ''} onClick={() => setActive(i)} aria-label={'Show ' + g.name} />)}</div><div className="hero-arrows-new"><button onClick={() => setActive(v => (v + games.length - 1) % games.length)} aria-label="Previous"><ChevronLeft /></button><button onClick={() => setActive(v => (v + 1) % games.length)} aria-label="Next"><ChevronRight /></button></div><button className="scroll-cue" onClick={() => scrollTo('games')}>SCROLL TO EXPLORE <ArrowDown size={13} /></button></div>
