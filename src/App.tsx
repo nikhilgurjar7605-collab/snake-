@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Bell, BookOpen, Compass, Gamepad2, Heart, Home, Menu, Search, Settings, Sparkles, Users, X, ChevronRight, Play, ArrowRight, SlidersHorizontal, CircleHelp, Trophy, Clock3, Swords, Medal, Target } from 'lucide-react'
 
 type Game={id:string;title:string;genre:string;description:string;cover:string;tag:string;status:'soon'|'live'}
@@ -21,6 +21,7 @@ type Page='home'|'library'|'multiplayer'|'leaderboard'|'wishlist'|'settings'|'he
 function App(){
  const [page,setPage]=useState<Page>('home')
  const [slide,setSlide]=useState(0)
+ useEffect(()=>{const timer=window.setInterval(()=>setSlide(current=>(current+1)%slides.length),7200);return()=>window.clearInterval(timer)},[])
  const [query,setQuery]=useState('')
  const [mobileNav,setMobileNav]=useState(false)
  const [favorites,setFavorites]=useState<string[]>(()=>{try{return JSON.parse(localStorage.getItem('pixora-favorites')||'[]')}catch{return []}})
