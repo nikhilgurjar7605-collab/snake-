@@ -309,3 +309,53 @@
 @media(max-width:650px){.landing-header{height:70px;padding:0 19px}.landing-brand{font-size:15px}.brand-symbol{height:32px;width:32px}.header-login{padding:10px 12px;font-size:8px!important}.menu-toggle{display:grid;place-items:center}.landing-nav{display:none;position:absolute;top:70px;left:0;right:0;padding:20px;background:rgba(9,10,16,.95);backdrop-filter:blur(20px);border-bottom:1px solid #ffffff18;flex-direction:column;align-items:flex-start;gap:22px}.landing-nav.show{display:flex}.landing-nav a{font-size:13px}.landing-hero{height:760px;min-height:720px;max-height:none;padding:120px 23px 95px;align-items:flex-end}.hero-image-wrap{inset:70px -35% 110px 0;mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}.hero-image-overlay{background:linear-gradient(0deg,#090a10 0%,rgba(9,10,16,.86) 22%,rgba(9,10,16,.15) 72%,rgba(9,10,16,.2)),linear-gradient(90deg,rgba(9,10,16,.5),transparent)}.hero-copy{width:100%;margin-bottom:12px}.hero-index{margin-top:28px}.hero-copy h1{font-size:clamp(72px,18vw,112px)}.hero-description{font-size:11px;margin:23px 0}.hero-feature{max-width:100%}.feature-copy{max-width:130px}.hero-buttons{gap:15px;flex-wrap:wrap}.btn-primary{height:44px;padding:0 15px;gap:12px}.btn-play{font-size:8px!important}.hero-side-note,.hero-vertical{display:none}.hero-bottom{left:23px;right:23px;bottom:20px}.scroll-cue{font-size:7px;letter-spacing:1px}.ticker{height:48px}.ticker-track span{font-size:10px;padding:0 16px}.worlds-section{padding:85px 20px 75px}.section-heading{display:block;margin-bottom:28px}.section-heading h2{font-size:58px}.section-heading>p{margin:18px 0 0}.world-card-grid{grid-template-columns:1fr 1fr;gap:9px}.world-card{height:300px}.world-card-top{left:11px;right:11px;top:11px;font-size:6px}.world-arrow{height:26px;width:26px}.world-card-bottom{left:12px;right:12px;bottom:13px}.world-card-bottom h3{font-size:15px}.world-card-bottom p{font-size:8px;min-height:38px}.world-card-bottom button{font-size:6px}.section-footnote{font-size:6px;letter-spacing:.9px}.manifesto{min-height:490px;padding:75px 23px;align-items:flex-start}.manifesto h2{font-size:62px}.manifesto-content>p{font-size:11px;max-width:310px}.manifesto-stamp{width:100px;height:100px;right:20px;top:auto;bottom:28px;transform:rotate(10deg)}.manifesto-stamp svg{width:18px}.manifesto-stamp span{font-size:10px;letter-spacing:2px}.final-cta{min-height:370px}.final-cta h2{font-size:66px}.landing-footer{padding:20px;flex-wrap:wrap}.landing-footer>span:nth-of-type(2){display:none}.landing-footer>span{font-size:6px}}
 @media(max-width:390px){.world-card{height:270px}.world-card-bottom p{display:none}.hero-copy h1{font-size:70px}.hero-feature div{min-width:110px}}
 @media(prefers-reduced-motion:reduce){.pixora-landing *,.pixora-landing *:before,.pixora-landing *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Premium dark glassmorphism + cinematic image treatment */
+.pixora-landing{
+ background:
+  radial-gradient(ellipse at 80% 8%,rgba(116,37,105,.2),transparent 34%),
+  radial-gradient(ellipse at 12% 38%,rgba(46,61,126,.19),transparent 36%),
+  #070810;
+}
+.pixora-landing:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(180deg,rgba(6,7,13,.24),rgba(6,7,13,.86)),url("https://img.goodfon.com/wallpaper/nbig/3/be/samurai-dojo-samurai-gory-nebo-kamni-derevo-ptitsy.webp");background-size:cover;background-position:center;opacity:.14;filter:saturate(.65)}
+.landing-header{margin:16px clamp(14px,4vw,64px) 0;left:0;right:0;top:0;width:auto;height:72px;padding:0 27px;border:1px solid rgba(255,255,255,.19);border-radius:22px;background:linear-gradient(115deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 48%,rgba(126,72,153,.12));backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);box-shadow:0 18px 50px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.2)}
+.landing-header.is-scrolled{position:fixed;margin:10px clamp(10px,3vw,42px) 0;background:rgba(10,10,20,.76);border-color:rgba(255,255,255,.2)}
+.brand-symbol{border-radius:13px;background:linear-gradient(145deg,#fa5a9b,#653bdb);box-shadow:0 0 30px #d44dff55,inset 0 1px 0 #fff8}
+.landing-nav a{padding:11px 16px;border-radius:14px}.landing-nav a.nav-active{background:linear-gradient(135deg,rgba(237,79,155,.24),rgba(103,81,214,.18));border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 #ffffff20,0 5px 24px #d64cff1b}.landing-nav a.nav-active:after{display:none}
+.header-login{border-radius:14px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 #ffffff1e}
+.landing-hero{min-height:820px;height:min(940px,100svh);padding-top:145px;background:radial-gradient(ellipse at 78% 40%,rgba(120,40,120,.3),transparent 45%),linear-gradient(110deg,#080811 0%,#0d0b18 50%,#090910 100%)}
+.hero-image-wrap{inset:0 0 0 24%;mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 92%,transparent 100%)}
+.landing-hero-image{opacity:.9;mix-blend-mode:normal;filter:saturate(1.15) contrast(1.05);object-position:center 40%}
+.hero-image-overlay{background:linear-gradient(90deg,#080811 0%,rgba(8,8,17,.84) 23%,rgba(8,8,17,.25) 58%,rgba(8,8,17,.25)),linear-gradient(0deg,#080811 0%,transparent 28%,rgba(8,8,17,.12) 82%,#080811 100%)}
+.hero-copy h1{font-size:clamp(82px,11.5vw,166px);letter-spacing:-.095em}
+.hero-copy h1 em,.section-heading h2 em,.manifesto h2 em,.final-cta h2 em{-webkit-text-stroke:1px rgba(245,226,255,.9);text-shadow:0 0 30px rgba(184,92,255,.15)}
+.eyebrow{padding:9px 14px;width:max-content;border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(110deg,rgba(222,76,170,.2),rgba(87,91,211,.16));backdrop-filter:blur(16px);box-shadow:0 0 28px #b348e32b}
+.hero-feature{border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 16px;background:linear-gradient(110deg,rgba(255,255,255,.1),rgba(255,255,255,.035));backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 #ffffff22,0 12px 36px #0003}
+.btn-primary{border-radius:15px;background:linear-gradient(110deg,#f04483,#e43c59 55%,#a43ce0);border-color:#ff9bc4;box-shadow:0 10px 34px #e83d7a55,inset 0 1px 0 #ffffff70}
+.btn-play span{background:rgba(255,255,255,.09);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 #ffffff30}
+.hero-arrows-new button{border-radius:50%;background:rgba(255,255,255,.09);backdrop-filter:blur(16px);border-color:#ffffff32}
+.hero-pager button{border-radius:20px}
+.ticker{background:linear-gradient(90deg,#d82d65,#8537bb,#514bc0);box-shadow:0 12px 55px #9639bd33}
+.worlds-section{padding-top:145px}
+.world-card{border-radius:23px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.055);box-shadow:0 20px 55px #0005,inset 0 1px 0 #ffffff24;backdrop-filter:blur(14px);overflow:hidden}
+.world-card:after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(145deg,rgba(255,255,255,.18),transparent 30%,transparent 70%,rgba(169,90,255,.1));opacity:.65}
+.world-card>img{filter:saturate(1.1) brightness(.84)}
+.world-card-shade{background:linear-gradient(180deg,rgba(7,7,16,.18),rgba(7,7,16,.06) 28%,rgba(7,7,16,.94) 100%)}
+.world-card-top{padding:9px 11px;border:1px solid #ffffff1e;border-radius:30px;background:rgba(8,8,18,.34);backdrop-filter:blur(14px)}
+.world-arrow{background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border-color:#ffffff55}
+.world-card-bottom button{padding:9px 12px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(14px)}
+.manifesto{background:linear-gradient(100deg,rgba(8,8,17,.95),rgba(12,10,23,.8)),url("https://assets.production.jabali.ai/7bca3d20-0e88-4cb5-a08e-6deaa838aff1/bd4d697c-7174-461b-951e-a0fbb4d7593f") center/cover no-repeat;border-color:#ffffff1f}
+.manifesto-stamp{border-color:#ffffff66;background:rgba(255,255,255,.06);backdrop-filter:blur(15px);box-shadow:0 0 60px #c04dff30,inset 0 0 40px #e849631c}
+.final-cta{background:linear-gradient(135deg,rgba(8,8,17,.9),rgba(21,10,28,.86)),url("https://img.goodfon.com/wallpaper/nbig/3/be/samurai-dojo-samurai-gory-nebo-kamni-derevo-ptitsy.webp") center/cover}
+.final-cta .btn-primary{z-index:2}
+.landing-footer{background:rgba(255,255,255,.025);backdrop-filter:blur(18px);border-color:#ffffff20}
+@media(max-width:650px){
+ .landing-header{margin:9px 9px 0;height:62px;padding:0 13px;border-radius:17px}
+ .landing-header.is-scrolled{margin:7px 7px 0}
+ .landing-hero{min-height:790px;height:100svh;padding-top:115px}
+ .hero-image-wrap{inset:60px -28% 105px -8%;mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 100%)}
+ .hero-image-overlay{background:linear-gradient(0deg,#080811 0%,rgba(8,8,17,.9) 25%,rgba(8,8,17,.12) 72%,rgba(8,8,17,.18)),linear-gradient(90deg,rgba(8,8,17,.35),transparent)}
+ .hero-copy h1{font-size:clamp(72px,17vw,112px)}
+ .world-card{border-radius:17px}
+}
+@media(prefers-reduced-transparency:reduce){.landing-header,.hero-feature,.world-card,.world-card-top,.manifesto-stamp{backdrop-filter:none;background:rgba(12,12,22,.95)}}
